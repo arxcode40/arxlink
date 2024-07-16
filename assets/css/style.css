@@ -1,0 +1,43 @@
+.backdrop-blur {
+	backdrop-filter: blur(0.625rem);
+}
+
+.navbar-brand-logo {
+	font-size: 1.5rem;
+	height: 1.5rem;
+}
+
+.min-dvh-100 {
+	min-height: 100dvh;
+}
+
+.top-1rem {
+	top: 1rem;
+}
+
+::-webkit-scrollbar {
+	height: 0.25rem;
+	width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #adb5bd;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #6c757d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #5c636a;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background-color: #565e64;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
