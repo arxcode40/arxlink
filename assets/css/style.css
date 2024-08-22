@@ -1,10 +1,15 @@
 .backdrop-blur {
-	backdrop-filter: blur(0.625rem);
+	backdrop-filter: blur(0.5rem);
+}
+
+.dropdown-toggle::after {
+	display: none;
 }
 
 .navbar-brand-logo {
 	font-size: 1.5rem;
 	height: 1.5rem;
+	width: 1.5rem;
 }
 
 .min-dvh-100 {

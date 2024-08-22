@@ -6,17 +6,16 @@
 	<meta content="ie=edge" http-equiv="X-UA-Compatible" />
 	<meta content="light" name="color-scheme" />
 	<meta content="#0d6efd" name="theme-color" />
-
 	<link href="favicon.png" rel="apple-touch-icon" />
 	<link href="favicon.png" rel="icon shortcut" type="image/png" />
 	<title>ArX Link</title>
-
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet" />
-
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sharer.js/sharer.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script>
 	<script src="assets/js/app.js"></script>
 </head>
 <body class="bg-body-secondary min-dvh-100">
@@ -27,23 +26,116 @@
 					<i class="bi bi-link-45deg text-primary lh-1 navbar-brand-logo"></i>
 					<span class="ms-2">ArX Link</span>
 				</a>
-
-				<button class="btn btn-outline-dark" onclick="shareLink()" type="button">
-					<i class="bi bi-share"></i>
-				</button>
+				<div class="dropdown">
+					<button class="btn btn-outline-dark dropdown-toggle" data-bs-auto-close="outside" data-bs-toggle="dropdown" type="button">
+						<i class="bi bi-share"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<h6 class="dropdown-header">
+								<i class="bi bi-share"></i>
+								Share this Arx Link
+							</h6>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="email" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-envelope"></i>
+								Email
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="facebook" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-facebook"></i>
+								Facebook
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="line" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-line"></i>
+								Line
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="linkedin" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-linkedin"></i>
+								LinkedIn
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="pinterest" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-pinterest"></i>
+								Pinterest
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="reddit" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-reddit"></i>
+								Reddit
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="skype" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-skype"></i>
+								Skype
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="telegram" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-telegram"></i>
+								Telegram
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="threads" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-threads"></i>
+								Threads
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="trello" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-trello"></i>
+								Trello
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="weibo" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-sina-weibo"></i>
+								Weibo
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="whatsapp" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-whatsapp"></i>
+								WhatsApp
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" data-blank="true" data-link="true" data-sharer="x" data-title="Check out this ArX Link" data-url="https://arxcode40.github.io/arxlink/" type="button">
+								<i class="bi bi-twitter-x"></i>
+								X
+							</button>
+						</li>
+						<li>
+							<hr class="dropdown-divider" />
+						</li>
+						<li>
+							<button class="dropdown-item" data-clipboard-text="Check out this ArX Link https://arxcode40.github.io/arxlink/" id="clipboard" type="button">
+								<i class="bi bi-clipboard"></i>
+								Clipboard
+							</button>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
-
 		<main class="my-3">
-			<img alt="Foto profil" class="d-block img-thumbnail mb-3 mx-auto rounded-circle shadow" loading="lazy" src="https://avatars.githubusercontent.com/u/135864156" width="96" />
-		
+			<img alt="Profile photo of Arya Putra Sadewa" class="d-block img-thumbnail mb-3 mx-auto rounded-circle shadow" loading="lazy" src="https://avatars.githubusercontent.com/u/135864156" width="96" />
 			<h4 class="text-center">Arya Putra Sadewa</h4>
 			<p class="text-body-secondary text-center">Junior Web Developer</p>
-
 			<div class="g-3 row">
 				<div class="col-12">
 					<div class="list-group rounded shadow">
-						<a class="list-group-item list-group-item-action p-3" href="mailto:arxcode40@gmail.com">
+						<a class="list-group-item list-group-item-action p-3" href="mailto:arxcode40@gmail.com" target="_blank">
 							<h6 class="mb-0 text-center">
 								<i class="bi bi-envelope"></i>
 								Email
@@ -103,16 +195,6 @@
 				</div>
 				<div class="col-12">
 					<div class="list-group rounded shadow">
-						<a class="list-group-item list-group-item-action p-3" href="https://twitter.com/arxt2411" target="_blank">
-							<h6 class="mb-0 text-center">
-								<i class="bi bi-twitter-x"></i>
-								Twitter
-							</h6>
-						</a>
-					</div>
-				</div>
-				<div class="col-12">
-					<div class="list-group rounded shadow">
 						<a class="list-group-item list-group-item-action p-3" href="https://wa.me/62895339792382" target="_blank">
 							<h6 class="mb-0 text-center">
 								<i class="bi bi-whatsapp"></i>
@@ -121,14 +203,22 @@
 						</a>
 					</div>
 				</div>
+				<div class="col-12">
+					<div class="list-group rounded shadow">
+						<a class="list-group-item list-group-item-action p-3" href="https://x.com/arxt2411" target="_blank">
+							<h6 class="mb-0 text-center">
+								<i class="bi bi-twitter-x"></i>
+								X
+							</h6>
+						</a>
+					</div>
+				</div>
 			</div>
 		</main>
-
 		<footer class="text-center">
 			<small>Copyright &copy; <span id="currentYear"></span> ArX Link. All Rights Reserved.</small>
 		</footer>
-
-		<button class="bottom-0 btn btn-primary end-0 m-3 position-fixed shadow" id="scrollTop" onclick="$(document).scrollTop(0)" style="display: none" type="button">
+		<button class="bottom-0 btn btn-secondary end-0 m-3 position-fixed shadow" id="scrollToTop" onclick="$(document).scrollTop(0);" style="display: none" type="button">
 			<i class="bi bi-chevron-double-up"></i>
 		</button>
 	</div>
